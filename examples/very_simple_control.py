@@ -17,7 +17,7 @@ def simulate_custom_input(show_plot=True):
     start_time = 0.0
     threshold = 2.0
     stop_time = 5.0
-    step_size = 0.2
+    step_size = 0.01
 
     # read the model description
     model_description = read_model_description(fmu_filename)
@@ -35,13 +35,12 @@ def simulate_custom_input(show_plot=True):
 
     # extract the FMU
     unzipdir1 = extract(fmu_filename)
-    unzipdir2 = extract(fmu_filename)
-
     fmu1 = FMU2Slave(guid=model_description.guid,
                     unzipDirectory=unzipdir1,
                     modelIdentifier=model_description.coSimulation.modelIdentifier,
                     instanceName='instance1')
-    
+
+    unzipdir2 = extract(fmu_filename)
     fmu2 = FMU2Slave(guid=model_description.guid,
                     unzipDirectory=unzipdir2,
                     modelIdentifier=model_description.coSimulation.modelIdentifier,
