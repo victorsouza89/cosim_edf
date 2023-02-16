@@ -74,7 +74,7 @@ class FMU:
 
 def simulate_controlled_plant(show_plot=True):
     # define the model information
-    plant_filename = 'integrator.fmu'
+    plant_filename = 'IntegratorM.fmu'
     inputs = ['In1']
     outputs = ['Out1']
 
