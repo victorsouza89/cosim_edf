@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+  fmiVersion="2.0"
+  guid="{95e7e37f-dabd-461f-979f-c3fd8cd75200}"
+  modelName="integrator"
+  generationTool="Simulink 9.8 (R2022b) 13-May-2022 with FMI Kit 3.0 (grtfmi.tlc, ode3, 0.001 s)"
+  generationDateAndTime="2023-03-01T14:04:16"
+  version="1.4">
+
+  <CoSimulation
+    modelIdentifier="integrator"
+    canBeInstantiatedOnlyOncePerProcess="true"
+    canHandleVariableCommunicationStepSize="true">
+  </CoSimulation>

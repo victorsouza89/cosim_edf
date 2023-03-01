@@ -1,0 +1,24 @@
+%implements s0_b0_cpmcd_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibCG_TrackEO(0)>\
+/* Outport: '<Root>/Out1' incorporates:
+ *  TransferFcn: '<Root>/Transfer Fcn'
+ */
+integrator_Y.Out1 = integrator_P.TransferFcn_C * integrator_X.TransferFcn_CSTATE;
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

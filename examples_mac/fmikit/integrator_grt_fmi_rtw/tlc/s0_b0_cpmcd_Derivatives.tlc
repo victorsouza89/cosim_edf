@@ -1,0 +1,29 @@
+%implements s0_b0_cpmcd_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+XDot_integrator_T *_rtXdot;
+%closefile localVarDecl
+_rtXdot = %<(SLibCG_SE(SLibGetContStatesDerivativeStructPtr()))>;
+%<SLibCG_TrackEI(0)>\
+/* Derivatives for TransferFcn: '<Root>/Transfer Fcn' incorporates:
+ *  Inport: '<Root>/In1'
+ */
+_rtXdot->TransferFcn_CSTATE = integrator_P.TransferFcn_A * integrator_X.TransferFcn_CSTATE;
+_rtXdot->TransferFcn_CSTATE += integrator_U.In1;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedDerivativeLocalVars", localVarDecl)>
+%endfunction
+%function DerivativesFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Derivatives(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%endfunction
