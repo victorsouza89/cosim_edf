@@ -18,7 +18,7 @@ The FMU class has five main methods:
 
 The FMU class also has a `terminate` method to end the simulation and release used resources.
 
-To test the functionality and demonstrate the use of the created class, an example has been developed, the function `simulate_controlled_plant()`, available in the file `example_cosim.py`.
+To test the functionality and demonstrate the use of the created class, an example has been developed, the function `simulate_controlled_plant()`, available in the file `example_cosim.py`, that can be executed as a simple cosimulation example.
 
 The `simulate_controlled_plant()` function simulates a control system using two FMUs: one for the system to be controlled (the "plant") and one for the controller. The system to be controlled is represented by the file `integrator.fmu`, while the controller is represented by the file `proportional_control.fmu`.
 
