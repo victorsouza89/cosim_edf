@@ -2,16 +2,21 @@
 
 ## Cosim with FMPy
 
-To facilitate the use of the FMPy library, a class called FMU is constructed and available in the file fmu_handle.py for the implementation of co-simulation with FMPy.
+To facilitate the use of the FMPy library, a class called FMU is constructed and available in the file `fmu_handle.py` for the implementation of co-simulation with FMPy.
 
 The FMU class has five main methods:
 
-__init__: This method is called when an FMU object is created. It takes as input the filename of an FMU, a list of inputs, and a list of outputs. The method reads the model description, collects value references for inputs and outputs, extracts the FMU, and uses the FMU2Slave function to place it in the context of FMPy.
-initialize: This method initializes the FMU for simulation. It instantiates the FMU, configures simulation parameters, and puts it in initialization mode.
-setInputs: This method sets input values for the FMU.
-getOutputs: This method returns the values of defined outputs for the FMU.
-doStep: This method performs a simulation step for the FMU with the current time and specified step size. It retrieves output values and stores input and output values.
-The FMU class also has a terminate method to end the simulation and release used resources.
+- `__init__`: This method is called when an FMU object is created. It takes as input the filename of an FMU, a list of inputs, and a list of outputs. The method reads the model description, collects value references for inputs and outputs, extracts the FMU, and uses the `FMU2Slave` function to place it in the context of FMPy.
+
+- `initialize`: This method initializes the FMU for simulation. It instantiates the FMU, configures simulation parameters, and puts it in initialization mode.
+
+- `setInputs`: This method sets input values for the FMU.
+
+- `getOutputs`: This method returns the values of defined outputs for the FMU.
+
+- `doStep`: This method performs a simulation step for the FMU with the current time and specified step size. It retrieves output values and stores input and output values.
+
+The FMU class also has a `terminate` method to end the simulation and release used resources.
 
 To test the functionality and demonstrate the use of the created class, an example has been developed, the function `simulate_controlled_plant()`, available in the file `example_cosim.py`.
 
