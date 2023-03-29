@@ -1,0 +1,26 @@
+[2023-03-29 10:05:41] [INFO] Stepper class: Constant 
+[2023-03-29 10:05:41] [INFO] Co-sim started
+	Daccosim NG 2022: version v2.7.0 released 01-03-2022
+	Start time: 0.0
+	Stop time: 10.0
+	CoInit method: Iterative Propagation
+	CoInit max iterations: 20
+	CoInit tolerance: 1.0E-5
+	Stepper method: ConstantStep
+	StepSize: 0.1
+	Transmit derivatives: false
+	Loading multithreaded : false
+	Stepping multithreaded : true
+	Termination multithreaded : true
+	Output buffer size: 8192
+	CSV cell separator: ;
+	CSV decimal separator: .
+	Output file: C:\Users\charl\Documents\01. Travail\03. 3A\06. Projets\01. Projet EDF\Example_daccosim-20230329100541466.csv 
+[2023-03-29 10:05:41] [INFO] FMU loading time: 53.5535 ms 
+[2023-03-29 10:05:41] [INFO] Number of SCCs: 1 
+[2023-03-29 10:05:41] [INFO] Final residual value: 0.0 
+[2023-03-29 10:05:41] [INFO] SCC 1 - Iterative Propagation had 1 iterations. Pipeline stage 1 
+[2023-03-29 10:05:41] [INFO] FMU init time: 25.7013 ms 
+[2023-03-29 10:05:41] [INFO] FMU co-sim time: 44.5258 ms 
+[2023-03-29 10:05:41] [INFO] FMU termination time: 1.4765 ms 
+[2023-03-29 10:05:41] [INFO] Co-sim finished with 101 steps. Total time (load + init + co-sim + terminate): 125.2571 ms 
