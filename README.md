@@ -8,13 +8,13 @@ Le dossier Generation contient un sous dossier pour la génération de FMU en Ma
 
 Le dossier Exploration\_Cosim contient un sous dossier pour chaque plateforme sur laquelle la cosimulation a été effectuée pour l'intégrateur. Les fichiers à utiliser sont pour la cosimulation sont :
 
-- ` Cosim\_Simulink.slx` pour la cosimulation en Simulink
+- `Cosim_Simulink.slx` pour la cosimulation en Simulink
 
 - `SSPTest.ssp` pour la cosimulation en Modelica
 
-- `example\_cosim.py et fmu\_handle.py` pour la cosimulation en Python
+- `example_cosim.py et fmu_handle.py` pour la cosimulation en Python
 
-- `Example\_daccosim.simx`: pour la cosimulation en Daccosim
+- `Example_daccosim.simx`: pour la cosimulation en Daccosim
 
 Les autres fichiers de ces dossiers correspondent aux FMU utilisées ou à des exportations de résultats.
 
